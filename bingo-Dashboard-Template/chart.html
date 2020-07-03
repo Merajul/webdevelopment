@@ -1,0 +1,955 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from www.lab.westilian.com/bingo-admin/chart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Mar 2018 05:28:50 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"/>
+<title>Bingo Admin - All Purpose Responsive Admin Template</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/themes.css" rel="stylesheet" type="text/css">
+<link href="css/typography.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/shCore.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.jqplot.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css">
+<link href="css/data-table.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="css/ui-elements.css" rel="stylesheet" type="text/css">
+<link href="css/wizard.css" rel="stylesheet" type="text/css">
+<link href="css/sprite.css" rel="stylesheet" type="text/css">
+<link href="css/gradient.css" rel="stylesheet" type="text/css">
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie7.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie9.css" />
+<![endif]-->
+<!-- Jquery -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/uniform.jquery.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-colorpicker.js"></script>
+<script src="js/sticky.full.js"></script>
+<script src="js/jquery.noty.js"></script>
+<script src="js/selectToUISlider.jQuery.js"></script>
+<script src="js/fg.menu.js"></script>
+<script src="js/jquery.tagsinput.js"></script>
+<script src="js/jquery.cleditor.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+<script src="js/jquery.peity.js"></script>
+<script src="js/jquery.simplemodal.js"></script>
+<script src="js/jquery.jBreadCrumb.1.1.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/jquery.idTabs.min.js"></script>
+<script src="js/jquery.multiFieldExtender.min.js"></script>
+<script src="js/jquery.confirm.js"></script>
+<script src="js/elfinder.min.js"></script>
+<script src="js/accordion.jquery.js"></script>
+<script src="js/autogrow.jquery.js"></script>
+<script src="js/check-all.jquery.js"></script>
+<script src="js/data-table.jquery.js"></script>
+<script src="js/ZeroClipboard.js"></script>
+<script src="js/TableTools.min.js"></script>
+<script src="js/jeditable.jquery.js"></script>
+<script src="js/duallist.jquery.js"></script>
+<script src="js/easing.jquery.js"></script>
+<script src="js/full-calendar.jquery.js"></script>
+<script src="js/input-limiter.jquery.js"></script>
+<script src="js/inputmask.jquery.js"></script>
+<script src="js/iphone-style-checkbox.jquery.js"></script>
+<script src="js/meta-data.jquery.js"></script>
+<script src="js/quicksand.jquery.js"></script>
+<script src="js/raty.jquery.js"></script>
+<script src="js/smart-wizard.jquery.js"></script>
+<script src="js/stepy.jquery.js"></script>
+<script src="js/treeview.jquery.js"></script>
+<script src="js/ui-accordion.jquery.js"></script>
+<script src="js/vaidation.jquery.js"></script>
+<script src="js/mosaic.1.0.1.min.js"></script>
+<script src="js/jquery.collapse.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.autocomplete.min.js"></script>
+<script src="js/localdata.js"></script>
+<script src="js/excanvas.min.js"></script>
+<script src="js/jquery.jqplot.min.js"></script>
+<script src="js/chart-plugins/jqplot.dateAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.cursor.min.js"></script>
+<script src="js/chart-plugins/jqplot.logAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.highlighter.min.js"></script>
+<script src="js/chart-plugins/jqplot.pieRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.barRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.pointLabels.min.js"></script>
+<script src="js/chart-plugins/jqplot.meterGaugeRenderer.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+<script>
+/*=================
+CHART 2
+===================*/
+$(function () {
+	/*========================================================
+	Data Point Highlighting, Tooltips and Cursor Tracking
+	==========================================================*/
+	var line1=[['23-May-08', 300.55], ['20-Jun-08', 566.5], ['25-Jul-08', 300.88], ['22-Aug-08', 509.84],
+      ['26-Sep-08', 300.13], ['24-Oct-08', 600.75], ['21-Nov-08', 303], ['26-Dec-08', 308.56],
+      ['23-Jan-09', 660.14], ['20-Feb-09', 346.51], ['20-Mar-09', 560.99], ['24-Apr-09', 386.15]];
+  var plot1 = $.jqplot('chart2', [line1], {
+      title:'Data Point Highlighting',
+      axes:{
+        xaxis:{
+          renderer:$.jqplot.DateAxisRenderer,
+          tickOptions:{
+            formatString:'%b&nbsp;%#d'
+          }
+        },
+        yaxis:{
+          tickOptions:{
+            formatString:'$%.2f'
+            }
+        }
+      },
+      highlighter: {
+        show: true,
+        sizeAdjust: 7.5
+      },
+      cursor: {
+        show: false
+      },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    },
+	seriesDefaults: {
+        lineWidth: 2, // Width of the line in pixels.
+        shadow: false,   // show shadow or not.
+		 markerOptions: {
+            show: true,             // wether to show data point markers.
+            style: 'filledCircle',  // circle, diamond, square, filledCircle.
+                                    // filledDiamond or filledSquare.
+            lineWidth: 2,       // width of the stroke drawing the marker.
+            size: 14,            // size (diameter, edge length, etc.) of the marker.
+            color: '#ff8a00',    // color of marker, set to color of line by default.
+            shadow: true,       // wether to draw shadow on marker or not.
+            shadowAngle: 45,    // angle of the shadow.  Clockwise from x axis.
+            shadowOffset: 1,    // offset from the line of the shadow,
+            shadowDepth: 3,     // Number of strokes to make when drawing shadow.  Each stroke
+                                // offset by shadowOffset from the last.
+            shadowAlpha: 0.07   // Opacity of the shadow
+        }
+	}
+  });
+	});
+/*=================
+CHART 3
+===================*/	
+$(function(){
+    var s1 = [200, 600, 700, 1000];
+    var s2 = [460, -210, 690, 820];
+    var s3 = [-260, -440, 320, 200];
+    // Can specify a custom tick Array.
+    // Ticks should match up one for each y value (category) in the series.
+    var ticks = ['May', 'June', 'July', 'August'];
+    var plot1 = $.jqplot('chart3', [s1, s2, s3], {
+        // The "seriesDefaults" option is an options object that will
+        // be applied to all series in the chart.
+        seriesDefaults:{
+			shadow: false,   // show shadow or not.
+            renderer:$.jqplot.BarRenderer,
+            rendererOptions: {fillToZero: true}
+        },
+        // Custom labels for the series are specified with the "label"
+        // option on the series option.  Here a series option object
+        // is specified for each series.
+        series:[
+            {label:'Hotel'},
+            {label:'Event Regristration'},
+            {label:'Airfare'}
+        ],
+        // Show the legend and put it outside the grid, but inside the
+        // plot container, shrinking the grid to accomodate the legend.
+        // A value of "outside" would not shrink the grid and allow
+        // the legend to overflow the container.
+        legend: {
+            show: true,
+            placement: 'outsideGrid'
+        },
+        axes: {
+            // Use a category axis on the x axis and use our custom ticks.
+            xaxis: {
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: ticks
+            },
+            // Pad the y axis just a little so bars can get close to, but
+            // not touch, the grid boundaries.  1.2 is the default padding.
+            yaxis: {
+                pad: 1.05,
+                tickOptions: {formatString: '$%d'}
+            }
+        },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    }
+    });
+	 // Bind a listener to the "jqplotDataClick" event.  Here, simply change
+  // the text of the info3 element to show what series and ponit were
+  // clicked along with the data for that point.
+  $('#chart3').bind('jqplotDataClick',
+    function (ev, seriesIndex, pointIndex, data) {
+      $('#info3').html('series: '+seriesIndex+', point: '+pointIndex+', data: '+data);
+    }
+  );
+});
+/*=================
+CHART 4
+===================*/
+$(function(){
+  var s1 = [2, 6, 7, 10];
+  var s2 = [7, 5, 3, 4];
+  var s3 = [14, 9, 3, 8];
+  plot3 = $.jqplot('chart4', [s1, s2, s3], {
+    // Tell the plot to stack the bars.
+    stackSeries: true,
+    captureRightClick: true,
+    seriesDefaults:{
+		shadow: false,   // show shadow or not.
+      renderer:$.jqplot.BarRenderer,
+      rendererOptions: {
+          // Put a 30 pixel margin between bars.
+          barMargin: 30,
+          // Highlight bars when mouse button pressed.
+          // Disables default highlighting on mouse over.
+          highlightMouseDown: true   
+      },
+      pointLabels: {show: true}
+    },
+    axes: {
+      xaxis: {
+          renderer: $.jqplot.CategoryAxisRenderer
+      },
+      yaxis: {
+        // Don't pad out the bottom of the data range.  By default,
+        // axes scaled as if data extended 10% above and below the
+        // actual range to prevent data points right on grid boundaries.
+        // Don't want to do that here.
+        padMin: 0
+      }
+    },
+    legend: {
+      show: true,
+      location: 'ne',
+      placement: 'outsideGrid'
+    } ,
+	grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    }    
+  });
+});
+/*=================
+CHART 5
+===================*/
+$(function(){
+  plot2 = jQuery.jqplot('chart5',
+    [[['Verwerkende industrie', 9],['Retail', 0], ['Primaire producent', 0],
+    ['Out of home', 0],['Groothandel', 0], ['Grondstof', 0], ['Consument', 3], ['Bewerkende industrie', 2]]],
+    {
+      title: ' ',
+      seriesDefaults: {
+        shadow: false,
+        renderer: jQuery.jqplot.PieRenderer,
+        rendererOptions: {
+          startAngle: 180,
+          sliceMargin: 4,
+          showDataLabels: true }
+      },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    },
+      legend: { show:true, location: 'w' }
+    }
+  );
+});
+/*=================
+CHART 6
+===================*/
+$(function () {
+    var s1 = [[2002, 112000], [2003, 122000], [2004, 104000], [2005, 99000], [2006, 121000],
+    [2007, 148000], [2008, 114000], [2009, 133000], [2010, 161000], [2011, 173000]];
+    var s2 = [[2002, 10200], [2003, 10800], [2004, 11200], [2005, 11800], [2006, 12400],
+    [2007, 12800], [2008, 13200], [2009, 12600], [2010, 13100]];
+    plot1 = $.jqplot("chart6", [s2, s1], {
+        // Turns on animatino for all series in this plot.
+        animate: true,
+        // Will animate plot on calls to plot1.replot({resetAxes:true})
+        animateReplot: true,
+        cursor: {
+            show: true,
+            zoom: false,
+            looseZoom: true,
+            showTooltip: false
+        },
+        series:[
+            {
+                pointLabels: {
+                    show: true
+                },
+                renderer: $.jqplot.BarRenderer,
+                showHighlight: false,
+                yaxis: 'y2axis',
+                rendererOptions: {
+                    // Speed up the animation a little bit.
+                    // This is a number of milliseconds. 
+                    // Default for bar series is 3000. 
+                    animation: {
+                        speed: 2500
+                    },
+                    barWidth: 15,
+                    barPadding: -15,
+                    barMargin: 0,
+                    highlightMouseOver: false
+                }
+            },
+            {
+                rendererOptions: {
+                    // speed up the animation a little bit.
+                    // This is a number of milliseconds.
+                    // Default for a line series is 2500.
+                    animation: {
+                        speed: 2000
+                    }
+                }
+            }
+        ],
+        axesDefaults: {
+            pad: 0
+        },
+        axes: {
+            // These options will set up the x axis like a category axis.
+            xaxis: {
+                tickInterval: 1,
+                drawMajorGridlines: false,
+                drawMinorGridlines: true,
+                drawMajorTickMarks: false,
+                rendererOptions: {
+                tickInset: 0.5,
+                minorTicks: 1
+            }
+            },
+            yaxis: {
+                tickOptions: {
+                    formatString: "$%'d"
+                },
+                rendererOptions: {
+                    forceTickAt0: true
+                }
+            },
+            y2axis: {
+                tickOptions: {
+                    formatString: "$%'d"
+                },
+                rendererOptions: {
+                    // align the ticks on the y2 axis with the y axis.
+                    alignTicks: true,
+                    forceTickAt0: true
+                }
+            }
+        },
+        highlighter: {
+            show: true,
+            showLabel: true,
+            tooltipAxes: 'y',
+            sizeAdjust: 7.5 , tooltipLocation : 'ne'
+        },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    },
+	seriesDefaults: {
+        lineWidth: 2, // Width of the line in pixels.
+        shadow: false,   // show shadow or not.
+		 markerOptions: {
+            show: true,             // wether to show data point markers.
+            style: 'filledCircle',  // circle, diamond, square, filledCircle.
+                                    // filledDiamond or filledSquare.
+            lineWidth: 2,       // width of the stroke drawing the marker.
+            size: 14,            // size (diameter, edge length, etc.) of the marker.
+            color: '#ff8a00',    // color of marker, set to color of line by default.
+            shadow: true,       // wether to draw shadow on marker or not.
+            shadowAngle: 45,    // angle of the shadow.  Clockwise from x axis.
+            shadowOffset: 1,    // offset from the line of the shadow,
+            shadowDepth: 3,     // Number of strokes to make when drawing shadow.  Each stroke
+                                // offset by shadowOffset from the last.
+            shadowAlpha: 0.07   // Opacity of the shadow
+        }
+	}
+    });
+});
+/*=================
+CHART 7
+===================*/
+$(function(){
+   s1 = [322];
+   plot3 = $.jqplot('chart7',[s1],{
+       seriesDefaults: {
+		   shadow: false,   // show shadow or not.
+           renderer: $.jqplot.MeterGaugeRenderer,
+           rendererOptions: {
+               min: 100,
+               max: 2000,
+               intervals:[200, 300, 400, 500,2000],
+               intervalColors:['#66cc66', '#93b75f', '#E7E658', '#cc6666']
+           }
+       }
+   });
+});
+/*=================
+CHART 8
+===================*/
+$(function(){
+  var plot2 = $.jqplot ('chart8', [[3,7,9,1,5,3,8,2,5]], {
+      // Give the plot a title.
+      title: 'Plot With Options',
+      // You can specify options for all axes on the plot at once with
+      // the axesDefaults object.  Here, we're using a canvas renderer
+      // to draw the axis label which allows rotated text.
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+      // Likewise, seriesDefaults specifies default options for all
+      // series in a plot.  Options specified in seriesDefaults or
+      // axesDefaults can be overridden by individual series or
+      // axes options.
+      // Here we turn on smoothing for the line.
+      seriesDefaults: {
+		  shadow: false,   // show shadow or not.
+          rendererOptions: {
+              smooth: true
+          }
+      },
+      // An axes object holds options for all axes.
+      // Allowable axes are xaxis, x2axis, yaxis, y2axis, y3axis, ...
+      // Up to 9 y axes are supported.
+      axes: {
+        // options for each axis are specified in seperate option objects.
+        xaxis: {
+          label: "X Axis",
+          // Turn off "padding".  This will allow data point to lie on the
+          // edges of the grid.  Default padding is 1.2 and will keep all
+          // points inside the bounds of the grid.
+          pad: 0
+        },
+        yaxis: {
+          label: "Y Axis"
+        }
+      },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    }
+    });
+});
+/*=================
+CHART 9
+===================*/
+$(function(){
+  var line1 = [14, 32, 41, 44, 40, 37, 29];
+  var line2 = [7, 12, 15, 17, 20, 27, 39];
+  var plot4 = $.jqplot('chart9', [line1, line2], {
+      title: 'Stacked Bar Chart with Cumulative Point Labels',
+      stackSeries: true,
+      seriesDefaults: {
+		  shadow: false,   // show shadow or not.
+          renderer: $.jqplot.BarRenderer,
+          rendererOptions:{barMargin: 25},
+          pointLabels:{show:true, stackedValue: true}
+      },
+      axes: {
+          xaxis:{renderer:$.jqplot.CategoryAxisRenderer}
+      },
+		grid: {
+         borderColor: '#ccc',     // CSS color spec for border around grid.
+        borderWidth: 2.0,           // pixel width of border around grid.
+        shadow: false               // draw a shadow for grid.
+    }
+  });
+});
+</script>
+</head>
+<body id="theme-default" class="full_block">
+<div id="left_bar">
+	<div id="primary_nav" class="g_blue">
+		<ul>
+			<li><a href="#" title="Dashboard"><span class="icon_block m_dashboard">Dashboard</span></a></li>
+			<li><a href="#" title="Projects"><span class="icon_block m_projects">Projects</span></a></li>
+			<li><a href="#" title="Events"><span class="icon_block m_events">Events</span></a></li>
+			<li><a href="#" title="Address Book"><span class="icon_block p_book">Address Book</span></a></li>
+			<li><a href="#" title="Media"><span class="icon_block m_media">Media</span></a></li>
+			<li><a href="#" title="Settings"><span class="icon_block m_settings">Settings</span></a></li>
+		</ul>
+	</div>
+	<div id="start_menu">
+		<ul>
+			<li class="jtop_menu">
+			<div class="icon_block black_gel">
+				<span class="start_icon">Quick Menu</span>
+			</div>
+			<ul class="black_gel">
+				<li><a href="#"><span class="list-icon graph_b">&nbsp;</span>Analytics<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon cog_4_b">&nbsp;</span>Settings<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon vault_b">&nbsp;</span>The Archive<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon list_images_b">&nbsp;</span>Task List<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon documents_b">&nbsp;</span>Content List<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon folder_b">&nbsp;</span>Media<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon phone_3_b">&nbsp;</span>Contact<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon users_b">&nbsp;</span>User<span class="mnu_tline">Tagline</span></a>
+				<ul>
+					<li><a href="#"><span class="list-icon user_2_b">&nbsp;</span>Add New User<span class="mnu_tline">Tagline</span></a></li>
+					<li><a href="#"><span class="list-icon money_b">&nbsp;</span>Paid Users<span class="mnu_tline">Tagline</span></a></li>
+					<li><a href="#"><span class="list-icon users_2_b">&nbsp;</span>All Users<span class="mnu_tline">Tagline</span></a></li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<div id="secondary_nav">
+			<ul id="sidenav" class="accordion_mnu collapsible">
+				<li><a href="#"><span class="nav_icon computer_imac"></span> Dashboard<span class="alert_notify blue">4</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="dashboard.html"><span class="list-icon">&nbsp;</span>Dashboard Main</a></li>
+					<li><a href="dashboard-01.html"><span class="list-icon">&nbsp;</span>Dashboard 01</a></li>
+					<li><a href="dashboard-02.html"><span class="list-icon">&nbsp;</span>Dashboard 02</a></li>
+					<li><a href="dashboard-03.html"><span class="list-icon">&nbsp;</span>Dashboard 03</a></li>
+					<li><a href="dashboard-04.html"><span class="list-icon">&nbsp;</span>Dashboard 04</a></li>
+				</ul>
+				</li>
+				<li><a href="#"><span class="nav_icon frames"></span> Forms<span class="alert_notify blue">8</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="form-elements.html"><span class="list-icon">&nbsp;</span>All Forms Elements</a></li>
+					<li><a href="left-label-form.html"><span class="list-icon">&nbsp;</span>Left Label Form</a></li>
+					<li><a href="top-label-form.html"><span class="list-icon">&nbsp;</span>Top Label Form</a></li>
+					<li><a href="form-xtras.html"><span class="list-icon">&nbsp;</span>Additional Forms (3)</a></li>
+					<li><a href="form-validation.html"><span class="list-icon">&nbsp;</span>Form Validation</a></li>
+					<li><a href="signup-form.html"><span class="list-icon">&nbsp;</span>Signup Form</a></li>
+					<li><a href="content-post.html"><span class="list-icon">&nbsp;</span>Content Post Form</a></li>
+					<li><a href="wizard.html"><span class="list-icon">&nbsp;</span>wizard</a></li>
+				</ul>
+				</li>
+				<li><a href="table.html"><span class="nav_icon blocks_images"></span> Tables</a>
+				</li>
+				<li><a href="ui-elements.html"><span class="nav_icon list_images"></span>User Interface Elements</a></li>
+				<li><a href="buttons-icons.html"><span class="nav_icon coverflow"></span>Butons And Icons</a></li>
+				<li><a href="widgets.html"><span class="nav_icon list_image"></span>All Widgets</a></li>
+				<li><a href="#"><span class="nav_icon documents"></span>Pages<span class="alert_notify blue">5</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="post-preview.html"><span class="list-icon">&nbsp;</span>Content</a></li>
+					<li><a href="login-01.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 01</a></li>
+					<li><a href="login-02.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 02</a></li>
+					<li><a href="login-03.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 03</a></li>
+					<li><a href="forgot-pass.html" target="_blank"><span class="list-icon">&nbsp;</span>Forgot Password</a></li>
+   					<li><a href="gradient.html" target="_blank"><span class="list-icon">&nbsp;</span>Colors Gradient</a></li>				</ul>
+				</li>
+				<li><a href="typography.html"><span class="nav_icon list"></span>Typography</a></li>
+				<li><a href="#"><span class="nav_icon frames"></span>Grid<span class="alert_notify blue">2</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="content-grid.html"><span class="list-icon">&nbsp;</span>Content Grid</a></li>
+					<li><a href="form-grid.html"><span class="list-icon">&nbsp;</span>Form Grid</a></li>
+				</ul>
+				</li>
+				<li><a href="chart.html"><span class="nav_icon chart_8"></span>Chart/Graph</a></li>
+				<li><a href="gallery.html"><span class="nav_icon image2_2"></span>Gallery</a></li>
+				<li><a href="calendar.html"><span class="nav_icon month_calendar"></span>Calendar</a></li>
+				<li><a href="file-manager.html"><span class="nav_icon folder"></span>File Manager</a></li>
+				<li><a href="#"><span class="nav_icon bulls_eye"></span>Error Pages<span class="alert_notify blue">5</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="403.html" target="_blank"><span class="list-icon">&nbsp;</span>403</a></li>
+					<li><a href="404.html" target="_blank"><span class="list-icon">&nbsp;</span>404</a></li>
+					<li><a href="405.html" target="_blank"><span class="list-icon">&nbsp;</span>405</a></li>
+					<li><a href="500.html" target="_blank"><span class="list-icon">&nbsp;</span>500</a></li>
+					<li><a href="503.html" target="_blank"><span class="list-icon">&nbsp;</span>503</a></li>
+				</ul>
+				</li>
+				<li><a href="invoice.html"><span class="nav_icon money_2"></span>Invoice</a></li>
+				<li><a href="#"><span class="nav_icon mail"></span>Email Templates<span class="alert_notify blue">3</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="email-templates/forgot-pass-email-template.html" target="_blank"><span class="list-icon">&nbsp;</span>Forgot Password</a></li>
+					<li><a href="email-templates/registration-confirmation-email-template.html" target="_blank"><span class="list-icon">&nbsp;</span>Registaion Confirmation</a></li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div id="header" class="blue_lin">
+		<div class="header_left">
+			<div class="logo">
+				<img src="images/logo.png" width="160" height="60" alt="Ekra">
+			</div>
+			<div id="responsive_mnu">
+				<a href="#responsive_menu" class="fg-button" id="hierarchybreadcrumb"><span class="responsive_icon"></span>Menu</a>
+				<div id="responsive_menu" class="hidden">
+					<ul>
+						<li><a href="#"> Dashboard</a>
+						<ul>
+							<li><a href="dashboard.html">Dashboard Main</a></li>
+							<li><a href="dashboard-01.html">Dashboard 01</a></li>
+							<li><a href="dashboard-02.html">Dashboard 02</a></li>
+							<li><a href="dashboard-03.html">Dashboard 03</a></li>
+							<li><a href="dashboard-04.html">Dashboard 04</a></li>
+						</ul>
+						</li>
+						<li><a href="#"> Forms</a>
+						<ul>
+							<li><a href="form-elements.html">All Forms Elements</a></li>
+							<li><a href="left-label-form.html">Left Label Form</a></li>
+							<li><a href="top-label-form.html">Top Label Form</a></li>
+							<li><a href="form-xtras.html">Additional Forms (3)</a></li>
+							<li><a href="form-validation.html">Form Validation</a></li>
+							<li><a href="signup-form.html">Signup Form</a></li>
+							<li><a href="content-post.html">Content Post Form</a></li>
+							<li><a href="wizard.html">wizard</a></li>
+						</ul>
+						</li>
+						<li><a href="table.html"> Tables</a></li>
+						<li><a href="ui-elements.html">User Interface Elements</a></li>
+						<li><a href="buttons-icons.html">Butons And Icons</a></li>
+						<li><a href="widgets.html">All Widgets</a></li>
+						<li><a href="#">Pages</a>
+						<ul>
+							<li><a href="post-preview.html">Content</a></li>
+							<li><a href="login-01.html" target="_blank">Login 01</a></li>
+							<li><a href="login-02.html" target="_blank">Login 02</a></li>
+							<li><a href="login-03.html" target="_blank">Login 03</a></li>
+							<li><a href="forgot-pass.html" target="_blank">Forgot Password</a></li>
+						</ul>
+						</li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="#">Grid</a>
+						<ul>
+							<li><a href="content-grid.html">Content Grid</a></li>
+							<li><a href="form-grid.html">Form Grid</a></li>
+						</ul>
+						</li>
+						<li><a href="chart.html">Chart/Graph</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+						<li><a href="file-manager.html">File Manager</a></li>
+						<li><a href="#">Error Pages</a>
+						<ul>
+							<li><a href="403.html" target="_blank">403</a></li>
+							<li><a href="404.html" target="_blank">404</a></li>
+							<li><a href="505.html" target="_blank">405</a></li>
+							<li><a href="500.html" target="_blank">500</a></li>
+							<li><a href="503.html" target="_blank">503</a></li>
+						</ul>
+						</li>
+						<li><a href="invoice.html">Invoice</a></li>
+						<li><a href="#">Email Templates</a>
+						<ul>
+							<li><a href="email-templates/forgot-pass-email-template.html" target="_blank">Forgot Password</a></li>
+							<li><a href="email-templates/registration-confirmation-email-template.html" target="_blank">Registaion Confirmation</a></li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header_right">
+			<div id="top_notification">
+				<ul>
+					<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle alert"><span class="icon"></span><span class="alert_notify orange">30</span></a>
+					<div class="notification_list dropdown-menu pull-left blue_d">
+						<div class="white_lin nlist_block">
+							<ul>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+							</ul>
+							<span class="btn_24_blue"><a href="#">View All</a></span>
+						</div>
+					</div>
+					</li>
+					<li class="inbox dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="icon"></span><span class="alert_notify blue">30</span></a>
+					<div class="notification_list dropdown-menu blue_d">
+						<div class="white_lin nlist_block">
+							<ul>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+							</ul>
+							<span class="btn_24_blue"><a href="#">View All</a></span>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div id="user_nav">
+				<ul>
+					<li class="user_thumb"><a href="#"><span class="icon"><img src="images/user_thumb.png" width="30" height="30" alt="User"></span></a></li>
+					<li class="user_info"><span class="user_name">Administrator</span><span><a href="#">Profile</a> &#124; <a href="#">Settings</a> &#124; <a href="#">Help&#63;</a></span></li>
+					<li class="logout"><a href="#"><span class="icon"></span>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page_title">
+		<span class="title_icon"><span class="graph"></span></span>
+		<h3>Chart</h3>
+		<div class="top_search">
+			<form action="#" method="post">
+				<ul id="search_box">
+					<li>
+					<input name="" type="text" class="search_input" id="suggest1" placeholder="Search...">
+					</li>
+					<li>
+					<input name="" type="submit" value="" class="search_btn">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<div class="switch_bar">
+		<ul>
+			<li><a href="#"><span class="stats_icon current_work_sl"></span><span class="label">Analytics</span></a></li>
+			<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="stats_icon user_sl"><span class="alert_notify orange">30</span></span><span class="label"> Users</span></a>
+			<div class="notification_list dropdown-menu blue_d">
+				<div class="white_lin nlist_block">
+					<ul>
+						<li>
+						<div class="nlist_thumb">
+							<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+						</div>
+						<div class="list_inf">
+							<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+						</div>
+						</li>
+						<li>
+						<div class="nlist_thumb">
+							<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+						</div>
+						<div class="list_inf">
+							<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+						</div>
+						</li>
+						<li>
+						<div class="nlist_thumb">
+							<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+						</div>
+						<div class="list_inf">
+							<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+						</div>
+						</li>
+					</ul>
+					<span class="btn_24_blue"><a href="#">View All</a></span>
+				</div>
+			</div>
+			</li>
+			<li><a href="#"><span class="stats_icon administrative_docs_sl"></span><span class="label">Content</span></a></li>
+			<li><a href="#"><span class="stats_icon finished_work_sl"><span class="alert_notify blue">30</span></span><span class="label">Task List</span></a></li>
+			<li><a href="#"><span class="stats_icon config_sl"></span><span class="label">Settings</span></a></li>
+			<li><a href="#"><span class="stats_icon archives_sl"></span><span class="label">Archive</span></a></li>
+			<li><a href="#"><span class="stats_icon address_sl"></span><span class="label">Contact</span></a></li>
+			<li><a href="#"><span class="stats_icon folder_sl"></span><span class="label">Media</span></a></li>
+			<li><a href="#"><span class="stats_icon category_sl"></span><span class="label">Explorer</span></a></li>
+			<li><a href="#"><span class="stats_icon calendar_sl"><span class="alert_notify orange">30</span></span><span class="label">Events</span></a></li>
+			<li><a href="#"><span class="stats_icon lightbulb_sl"></span><span class="label">Support</span></a></li>
+			<li><a href="#"><span class="stats_icon bank_sl"><span class="alert_notify blue">30</span></span><span class="label">Order List</span></a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="grid_container">
+			<div class="grid_12 full_block">
+				<div class="widget_wrap">
+					<div class="widget_content">
+						<div id="chart6" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 2</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart2" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 3</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart3" class="chart_block">
+						</div>
+						<p class="text">
+							You Clicked: <span id="info3">series: 2, point: 3, data: 4,8</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 4</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart4" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_6">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 5</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart5" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_6">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 7</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart7" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<span class="clear"></span>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 8</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart8" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Cahrt 9</h6>
+					</div>
+					<div class="widget_content">
+						<h3>Header</h3>
+						<p>
+							 Cras erat diam, consequat quis tincidunt nec, eleifend a turpis. Aliquam ultrices feugiat metus, ut imperdiet erat mollis at. Curabitur mattis risus sagittis nibh lobortis vel.
+						</p>
+						<div id="chart9" class="chart_block">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="clear"></span>
+	</div>
+</div>
+</body>
+
+<!-- Mirrored from www.lab.westilian.com/bingo-admin/chart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Mar 2018 05:28:50 GMT -->
+</html>

@@ -1,0 +1,1277 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from www.lab.westilian.com/bingo-admin/ui-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Mar 2018 05:28:42 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"/>
+<title>Bingo Admin - All Purpose Responsive Admin Template</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/themes.css" rel="stylesheet" type="text/css">
+<link href="css/typography.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/shCore.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.jqplot.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css">
+<link href="css/data-table.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="css/ui-elements.css" rel="stylesheet" type="text/css">
+<link href="css/wizard.css" rel="stylesheet" type="text/css">
+<link href="css/sprite.css" rel="stylesheet" type="text/css">
+<link href="css/gradient.css" rel="stylesheet" type="text/css">
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie7.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie9.css" />
+<![endif]-->
+<!-- Jquery -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/uniform.jquery.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/sticky.full.js"></script>
+<script src="js/jquery.noty.js"></script>
+<script src="js/selectToUISlider.jQuery.js"></script>
+<script src="js/fg.menu.js"></script>
+<script src="js/jquery.tagsinput.js"></script>
+<script src="js/jquery.cleditor.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+<script src="js/jquery.peity.js"></script>
+<script src="js/jquery.simplemodal.js"></script>
+<script src="js/jquery.jBreadCrumb.1.1.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/bootstrap-colorpicker.js"></script>
+<script src="js/jquery.idTabs.min.js"></script>
+<script src="js/jquery.multiFieldExtender.min.js"></script>
+<script src="js/jquery.confirm.js"></script>
+<script src="js/accordion.jquery.js"></script>
+<script src="js/autogrow.jquery.js"></script>
+<script src="js/check-all.jquery.js"></script>
+<script src="js/data-table.jquery.js"></script>
+<script src="js/ZeroClipboard.js"></script>
+<script src="js/TableTools.min.js"></script>
+<script src="js/jeditable.jquery.js"></script>
+<script src="js/accordion.jquery.js"></script>
+<script src="js/duallist.jquery.js"></script>
+<script src="js/easing.jquery.js"></script>
+<script src="js/full-calendar.jquery.js"></script>
+<script src="js/input-limiter.jquery.js"></script>
+<script src="js/inputmask.jquery.js"></script>
+<script src="js/iphone-style-checkbox.jquery.js"></script>
+<script src="js/meta-data.jquery.js"></script>
+<script src="js/quicksand.jquery.js"></script>
+<script src="js/raty.jquery.js"></script>
+<script src="js/smart-wizard.jquery.js"></script>
+<script src="js/stepy.jquery.js"></script>
+<script src="js/treeview.jquery.js"></script>
+<script src="js/ui-accordion.jquery.js"></script>
+<script src="js/vaidation.jquery.js"></script>
+<script src="js/mosaic.1.0.1.min.js"></script>
+<script src="js/jquery.collapse.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.autocomplete.min.js"></script>
+<script src="js/localdata.js"></script>
+<script src="js/excanvas.min.js"></script>
+<script src="js/jquery.jqplot.min.js"></script>
+<script src="js/chart-plugins/jqplot.dateAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.cursor.min.js"></script>
+<script src="js/chart-plugins/jqplot.logAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.highlighter.min.js"></script>
+<script src="js/chart-plugins/jqplot.pieRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.barRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script src="js/chart-plugins/jqplot.pointLabels.min.js"></script>
+<script src="js/chart-plugins/jqplot.meterGaugeRenderer.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+<script>
+$(function(){
+			//demo 1
+			$('select#speed').selectToUISlider({labels: 5}).next();
+			//demo 2
+			$('select#valueA, select#valueB').selectToUISlider();
+			//demo 3
+			$('select#valueAA, select#valueBB').selectToUISlider({
+				labels: 12
+			});
+			//Chart
+	});
+	$(function() {
+		var select = $( "#minbeds" );
+		var slider = $( "<div id='slider' class='black_w slider_max box_inset_s'></div>" ).insertAfter( select ).slider({
+			min: 1,
+			max: 6,
+			range: "min",
+			value: select[ 0 ].selectedIndex + 1,
+			slide: function( event, ui ) {
+				select[ 0 ].selectedIndex = ui.value - 1;
+			}
+		});
+		$( "#minbeds" ).change(function() {
+			slider.slider( "value", this.selectedIndex + 1 );
+		});
+	});
+</script>
+</head>
+<body id="theme-default" class="full_block">
+<div id="left_bar">
+	<div id="primary_nav" class="g_blue">
+		<ul>
+			<li><a href="#" title="Dashboard"><span class="icon_block m_dashboard">Dashboard</span></a></li>
+			<li><a href="#" title="Projects"><span class="icon_block m_projects">Projects</span></a></li>
+			<li><a href="#" title="Events"><span class="icon_block m_events">Events</span></a></li>
+			<li><a href="#" title="Address Book"><span class="icon_block p_book">Address Book</span></a></li>
+			<li><a href="#" title="Media"><span class="icon_block m_media">Media</span></a></li>
+			<li><a href="#" title="Settings"><span class="icon_block m_settings">Settings</span></a></li>
+		</ul>
+	</div>
+	<div id="start_menu">
+		<ul>
+			<li class="jtop_menu">
+			<div class="icon_block black_gel">
+				<span class="start_icon">Quick Menu</span>
+			</div>
+			<ul class="black_gel">
+				<li><a href="#"><span class="list-icon graph_b">&nbsp;</span>Analytics<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon cog_4_b">&nbsp;</span>Settings<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon vault_b">&nbsp;</span>The Archive<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon list_images_b">&nbsp;</span>Task List<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon documents_b">&nbsp;</span>Content List<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon folder_b">&nbsp;</span>Media<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon phone_3_b">&nbsp;</span>Contact<span class="mnu_tline">Tagline</span></a></li>
+				<li><a href="#"><span class="list-icon users_b">&nbsp;</span>User<span class="mnu_tline">Tagline</span></a>
+				<ul>
+					<li><a href="#"><span class="list-icon user_2_b">&nbsp;</span>Add New User<span class="mnu_tline">Tagline</span></a></li>
+					<li><a href="#"><span class="list-icon money_b">&nbsp;</span>Paid Users<span class="mnu_tline">Tagline</span></a></li>
+					<li><a href="#"><span class="list-icon users_2_b">&nbsp;</span>All Users<span class="mnu_tline">Tagline</span></a></li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<div id="secondary_nav">
+			<ul id="sidenav" class="accordion_mnu collapsible">
+				<li><a href="#"><span class="nav_icon computer_imac"></span> Dashboard<span class="alert_notify blue">4</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="dashboard.html"><span class="list-icon">&nbsp;</span>Dashboard Main</a></li>
+					<li><a href="dashboard-01.html"><span class="list-icon">&nbsp;</span>Dashboard 01</a></li>
+					<li><a href="dashboard-02.html"><span class="list-icon">&nbsp;</span>Dashboard 02</a></li>
+					<li><a href="dashboard-03.html"><span class="list-icon">&nbsp;</span>Dashboard 03</a></li>
+					<li><a href="dashboard-04.html"><span class="list-icon">&nbsp;</span>Dashboard 04</a></li>
+				</ul>
+				</li>
+				<li><a href="#"><span class="nav_icon frames"></span> Forms<span class="alert_notify blue">8</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="form-elements.html"><span class="list-icon">&nbsp;</span>All Forms Elements</a></li>
+					<li><a href="left-label-form.html"><span class="list-icon">&nbsp;</span>Left Label Form</a></li>
+					<li><a href="top-label-form.html"><span class="list-icon">&nbsp;</span>Top Label Form</a></li>
+					<li><a href="form-xtras.html"><span class="list-icon">&nbsp;</span>Additional Forms (3)</a></li>
+					<li><a href="form-validation.html"><span class="list-icon">&nbsp;</span>Form Validation</a></li>
+					<li><a href="signup-form.html"><span class="list-icon">&nbsp;</span>Signup Form</a></li>
+					<li><a href="content-post.html"><span class="list-icon">&nbsp;</span>Content Post Form</a></li>
+					<li><a href="wizard.html"><span class="list-icon">&nbsp;</span>wizard</a></li>
+				</ul>
+				</li>
+				<li><a href="table.html"><span class="nav_icon blocks_images"></span> Tables</a>
+				</li>
+				<li><a href="ui-elements.html"><span class="nav_icon list_images"></span>User Interface Elements</a></li>
+				<li><a href="buttons-icons.html"><span class="nav_icon coverflow"></span>Butons And Icons</a></li>
+				<li><a href="widgets.html"><span class="nav_icon list_image"></span>All Widgets</a></li>
+				<li><a href="#"><span class="nav_icon documents"></span>Pages<span class="alert_notify blue">5</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="post-preview.html"><span class="list-icon">&nbsp;</span>Content</a></li>
+					<li><a href="login-01.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 01</a></li>
+					<li><a href="login-02.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 02</a></li>
+					<li><a href="login-03.html" target="_blank"><span class="list-icon">&nbsp;</span>Login 03</a></li>
+					<li><a href="forgot-pass.html" target="_blank"><span class="list-icon">&nbsp;</span>Forgot Password</a></li>
+   					<li><a href="gradient.html" target="_blank"><span class="list-icon">&nbsp;</span>Colors Gradient</a></li>				</ul>
+				</li>
+				<li><a href="typography.html"><span class="nav_icon list"></span>Typography</a></li>
+				<li><a href="#"><span class="nav_icon frames"></span>Grid<span class="alert_notify blue">2</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="content-grid.html"><span class="list-icon">&nbsp;</span>Content Grid</a></li>
+					<li><a href="form-grid.html"><span class="list-icon">&nbsp;</span>Form Grid</a></li>
+				</ul>
+				</li>
+				<li><a href="chart.html"><span class="nav_icon chart_8"></span>Chart/Graph</a></li>
+				<li><a href="gallery.html"><span class="nav_icon image2_2"></span>Gallery</a></li>
+				<li><a href="calendar.html"><span class="nav_icon month_calendar"></span>Calendar</a></li>
+				<li><a href="file-manager.html"><span class="nav_icon folder"></span>File Manager</a></li>
+				<li><a href="#"><span class="nav_icon bulls_eye"></span>Error Pages<span class="alert_notify blue">5</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="403.html" target="_blank"><span class="list-icon">&nbsp;</span>403</a></li>
+					<li><a href="404.html" target="_blank"><span class="list-icon">&nbsp;</span>404</a></li>
+					<li><a href="405.html" target="_blank"><span class="list-icon">&nbsp;</span>405</a></li>
+					<li><a href="500.html" target="_blank"><span class="list-icon">&nbsp;</span>500</a></li>
+					<li><a href="503.html" target="_blank"><span class="list-icon">&nbsp;</span>503</a></li>
+				</ul>
+				</li>
+				<li><a href="invoice.html"><span class="nav_icon money_2"></span>Invoice</a></li>
+				<li><a href="#"><span class="nav_icon mail"></span>Email Templates<span class="alert_notify blue">3</span><span class="up_down_arrow">&nbsp;</span></a>
+				<ul class="acitem">
+					<li><a href="email-templates/forgot-pass-email-template.html" target="_blank"><span class="list-icon">&nbsp;</span>Forgot Password</a></li>
+					<li><a href="email-templates/registration-confirmation-email-template.html" target="_blank"><span class="list-icon">&nbsp;</span>Registaion Confirmation</a></li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="sidetree">
+			<div class="treeheader gary_lin">
+				 Tree View
+			</div>
+			<div id="sidetreecontrol" class="white_gel">
+				<a href="ui-elementsd41d.html?#">Collapse All</a> | <a href="ui-elementsd41d.html?#">Expand All</a>
+			</div>
+			<ul class="treeview" id="tree">
+				<li class="expandable">
+				<div class="hitarea expandable-hitarea">
+				</div>
+				<a href="#">Home</a>
+				<ul style="display:none;">
+					<li><a href="#">Airdrie eNewsletters </a></li>
+					<li><a href="#">Airdrie Directories</a></li>
+					<li><a href="#">Airdrie Life Video</a></li>
+					<li><a href="#">Airdrie News</a></li>
+					<li><a href="#">Airdrie Quick Links</a></li>
+					<li><a href="#" target="_blank">Airdrie Weather</a></li>
+					<li><a href="#">Careers</a> | <a href="#">Contact Us</a> | <a href="#">Site Map</a> | <a href="#">Links</a></li>
+					<li class="last"><a href="#">Special Notices</a></li>
+				</ul>
+				</li>
+				<li class="expandable">
+				<div class="hitarea expandable-hitarea">
+				</div>
+				<span>City Services</span>
+				<ul style="display: none;">
+					<li class="expandable">
+					<div class="hitarea expandable-hitarea">
+					</div>
+					<a href="#">Assessment</a>
+					<ul style="display: none;">
+						<li><a href="#">Assessment FAQs</a></li>
+						<li><a href="#">2007 Property Assessment Notices</a></li>
+						<li><a href="#" target="_blank">CREB</a></li>
+						<li><a href="#">Non-Residential Assessment / Tax Comparisons</a></li>
+						<li><a href="#">How to File a Complaint</a></li>
+						<li class="last"><a href="#">Supplementary Assessment and Tax</a></li>
+					</ul>
+					</li>
+					<li class="expandable">
+					<div class="hitarea expandable-hitarea">
+					</div>
+					<a href="#">Building &amp; Development </a>
+					<ul style="display: none;">
+						<li class="expandable">
+						<div class="hitarea expandable-hitarea">
+						</div>
+						<a href="#">Building Inspections</a>
+						<ul style="display: none;">
+							<li><a href="#">Builder Forums</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Contractor Notices</a></li>
+							<li class="last"><a href="#">Inspector Guidelines</a></li>
+						</ul>
+						</li>
+						<li class="last"><a href="#">Services</a></li>
+					</ul>
+					</li>
+					<li class="last"><a href="#">Services</a></li>
+				</ul>
+				</li>
+				<li class="last"><a href="#">Online Services</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div id="header" class="blue_lin">
+		<div class="header_left">
+			<div class="logo">
+				<img src="images/logo.png" width="160" height="60" alt="Ekra">
+			</div>
+			<div id="responsive_mnu">
+				<a href="#responsive_menu" class="fg-button" id="hierarchybreadcrumb"><span class="responsive_icon"></span>Menu</a>
+				<div id="responsive_menu" class="hidden">
+					<ul>
+						<li><a href="#"> Dashboard</a>
+						<ul>
+							<li><a href="dashboard.html">Dashboard Main</a></li>
+							<li><a href="dashboard-01.html">Dashboard 01</a></li>
+							<li><a href="dashboard-02.html">Dashboard 02</a></li>
+							<li><a href="dashboard-03.html">Dashboard 03</a></li>
+							<li><a href="dashboard-04.html">Dashboard 04</a></li>
+						</ul>
+						</li>
+						<li><a href="#"> Forms</a>
+						<ul>
+							<li><a href="form-elements.html">All Forms Elements</a></li>
+							<li><a href="left-label-form.html">Left Label Form</a></li>
+							<li><a href="top-label-form.html">Top Label Form</a></li>
+							<li><a href="form-xtras.html">Additional Forms (3)</a></li>
+							<li><a href="form-validation.html">Form Validation</a></li>
+							<li><a href="signup-form.html">Signup Form</a></li>
+							<li><a href="content-post.html">Content Post Form</a></li>
+							<li><a href="wizard.html">wizard</a></li>
+						</ul>
+						</li>
+						<li><a href="table.html"> Tables</a></li>
+						<li><a href="ui-elements.html">User Interface Elements</a></li>
+						<li><a href="buttons-icons.html">Butons And Icons</a></li>
+						<li><a href="widgets.html">All Widgets</a></li>
+						<li><a href="#">Pages</a>
+						<ul>
+							<li><a href="post-preview.html">Content</a></li>
+							<li><a href="login-01.html" target="_blank">Login 01</a></li>
+							<li><a href="login-02.html" target="_blank">Login 02</a></li>
+							<li><a href="login-03.html" target="_blank">Login 03</a></li>
+							<li><a href="forgot-pass.html" target="_blank">Forgot Password</a></li>
+						</ul>
+						</li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="#">Grid</a>
+						<ul>
+							<li><a href="content-grid.html">Content Grid</a></li>
+							<li><a href="form-grid.html">Form Grid</a></li>
+						</ul>
+						</li>
+						<li><a href="chart.html">Chart/Graph</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+						<li><a href="file-manager.html">File Manager</a></li>
+						<li><a href="#">Error Pages</a>
+						<ul>
+							<li><a href="403.html" target="_blank">403</a></li>
+							<li><a href="404.html" target="_blank">404</a></li>
+							<li><a href="505.html" target="_blank">405</a></li>
+							<li><a href="500.html" target="_blank">500</a></li>
+							<li><a href="503.html" target="_blank">503</a></li>
+						</ul>
+						</li>
+						<li><a href="invoice.html">Invoice</a></li>
+						<li><a href="#">Email Templates</a>
+						<ul>
+							<li><a href="email-templates/forgot-pass-email-template.html" target="_blank">Forgot Password</a></li>
+							<li><a href="email-templates/registration-confirmation-email-template.html" target="_blank">Registaion Confirmation</a></li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header_right">
+			<div id="top_notification">
+				<ul>
+					<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle alert"><span class="icon"></span><span class="alert_notify orange">30</span></a>
+					<div class="notification_list dropdown-menu pull-left blue_d">
+						<div class="white_lin nlist_block">
+							<ul>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+							</ul>
+							<span class="btn_24_blue"><a href="#">View All</a></span>
+						</div>
+					</div>
+					</li>
+					<li class="inbox dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="icon"></span><span class="alert_notify blue">30</span></a>
+					<div class="notification_list dropdown-menu blue_d">
+						<div class="white_lin nlist_block">
+							<ul>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+								<li>
+								<div class="nlist_thumb">
+									<img src="images/photo_60x60.jpg" width="40" height="40" alt="img">
+								</div>
+								<div class="list_inf">
+									<a href="#">Cras erat diam, consequat quis tincidunt nec, eleifend.</a>
+								</div>
+								</li>
+							</ul>
+							<span class="btn_24_blue"><a href="#">View All</a></span>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div id="user_nav">
+				<ul>
+					<li class="user_thumb"><a href="#"><span class="icon"><img src="images/user_thumb.png" width="30" height="30" alt="User"></span></a></li>
+					<li class="user_info"><span class="user_name">Administrator</span><span><a href="#">Profile</a> &#124; <a href="#">Settings</a> &#124; <a href="#">Help&#63;</a></span></li>
+					<li class="logout"><a href="#"><span class="icon"></span>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page_title">
+		<span class="title_icon"><span class="list_images"></span></span>
+		<h3>User Interface Elements</h3>
+		<div class="top_search">
+			<form action="#" method="post">
+				<ul id="search_box">
+					<li>
+					<input name="" type="text" class="search_input" id="suggest1" placeholder="Search...">
+					</li>
+					<li>
+					<input name="" type="submit" value="" class="search_btn">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<div id="content">
+		<div class="grid_container">
+			<div class="grid_12 full_block">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Animated Progress Bar</h6>
+					</div>
+					<div class="widget_content">
+						<div class="elem_grid">
+							<div id="progress1">
+								<div class="percent">
+								</div>
+								<div class="pbar black_g">
+								</div>
+							</div>
+							<div id="progress2">
+								<div class="percent">
+								</div>
+								<div class="pbar dark_d">
+								</div>
+							</div>
+							<div id="progress3">
+								<div class="percent">
+								</div>
+								<div class="pbar black_pro">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_6">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Progress Bar</h6>
+					</div>
+					<div class="widget_content">
+						<div class="elem_grid">
+							<div id="progress_s">
+								<div class="pro_meta">
+									Loading Content...
+								</div>
+								<div class="percent">
+								</div>
+								<div class="pbar">
+								</div>
+							</div>
+							<div id="progress_p">
+								<div class="pro_meta">
+									Loading Content...
+								</div>
+								<div class="percent">
+								</div>
+								<div class="pbar">
+								</div>
+							</div>
+							<div id="progress_n">
+								<div class="pro_meta">
+									Loading Content...
+								</div>
+								<div class="percent">
+								</div>
+								<div class="pbar">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_6">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Progres Bar</h6>
+					</div>
+					<div class="widget_content">
+						<div class="elem_grid">
+							<div id="probar_blue" class="black_g">
+							</div>
+							<div id="probar_black" class="blue_lin">
+							</div>
+							<div id="probar_orange" class="black_gel">
+							</div>
+							<div id="probar_green" class="orange_f">
+							</div>
+							<div id="probar_stripe">
+							</div>
+							<div id="probar_stripe_blue">
+							</div>
+							<div id="probar_stripe_green">
+							</div>
+							<div id="probar_stripe_orange">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>ColorBox</h6>
+					</div>
+					<div class="widget_content">
+						<ul class="colorbox_elem">
+							<li><a class="group1" href="data/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee.">Grouped Photo 1</a></li>
+							<li><a class="group4" href="data/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee.">Grouped Photo show</a></li>
+							<li><a class="inline" href="#inline_content">Inline HTML</a></li>
+							<li><a class='ajax' href="data/ajax.html" title="Homer Defined">Outside HTML (Ajax)</a></li>
+							<li><a class='ajax' href="data/flash.html" title="Royksopp: Remind Me">Flash / Video (Ajax/Embedded)</a></li>
+							<li><a class='youtube' href="http://www.youtube.com/embed/617ANIA5Rqs?rel=0&amp;wmode=transparent" title="The Knife: We Share Our Mother's Health">Flash / Video (Iframe/Direct Link To YouTube)</a></li>
+							<li><a class='iframe' href="http://themeforest.net/user/westilian/portfolio">Outside Webpage (Iframe)</a></li>
+						</ul>
+					</div>
+					<div style='display:none'>
+						<div id='inline_content' style='padding:10px; background:#fff;'>
+							<p>
+								<strong>This content comes from a hidden element on this page.</strong>
+							</p>
+							<p>
+								 The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.
+							</p>
+							<p>
+								<a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a>
+							</p>
+							<p>
+								<strong>If you try to open a new ColorBox while it is already open, it will update itself with the new content.</strong>
+							</p>
+							<p>
+								 Updating Content Example:<br/>
+								<a class="ajax" href="data/flash.html">Click here to load new content</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Tooltip</h6>
+					</div>
+					<div class="widget_content">
+						<ul class="tipsy_elem">
+							<li><a href="#" class="tipTop" title="Bingo Ui">Top</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipLeft">Left</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipRight">Right</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipBot">Bottom</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipTopL">Top Left</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipTopR">Top Right</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipBotL">Bottom Left</a></li>
+							<li><a href="#" title="Bingo Ui" class="tipBotR">Bottom Right</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Modal/Dialog Box</h6>
+					</div>
+					<div class="widget_content">
+						<ul class="modal_elem">
+							<li>
+							<div id='confirm-dialog'>
+								<!-- modal content -->
+								<div id='confirm'>
+									<div class='header blue_d'>
+										<span>Confirm</span>
+									</div>
+									<div class='message'>
+									</div>
+									<div class='buttons'>
+										<div class='no simplemodal-close btn_30_blue'>
+											<a href="#"><span>No</span></a>
+										</div>
+										<div class='yes btn_30_blue'>
+											<a href="#"><span>Yes</span></a>
+										</div>
+									</div>
+								</div>
+								<a href='#' class='confirm'>Confirm Dialog</a>
+							</div>
+							</li>
+							<li>
+							<!-- modal content -->
+							<div id="osx-modal-content">
+								<div id="osx-modal-title" class="blue_d">
+									 OSX Style Modal Dialog
+								</div>
+								<div class="close">
+									<a href="#" class="simplemodal-close">x</a>
+								</div>
+								<div id="osx-modal-data">
+									<h2>Hello! I'm SimpleModal!</h2>
+									<p>
+										 SimpleModal is a lightweight jQuery Plugin which provides a powerful interface for modal dialog development. Think of it as a modal dialog framework.
+									</p>
+									<p>
+										 SimpleModal gives you the flexibility to build whatever you can envision, while shielding you from related cross-browser issues inherent with UI development..
+									</p>
+									<p>
+										 As you can see by this example, SimpleModal can be easily configured to behave like an OSX dialog. With a handful options, 2 custom callbacks and some styling, you have a visually appealing dialog that is ready to use!
+									</p>
+									<div class="btn_24_blue">
+										<a href="#" class="simplemodal-close"><span class="icon cross_co"></span><span>Link Button</span></a>
+									</div>
+									<p>
+										<span style="display:block;">(or press ESC or click the overlay)</span>
+									</p>
+								</div>
+							</div>
+							<a href='#' id='osx-modal' class='osx'>Demo</a></li>
+							<li>
+							<div id="basic-modal-content">
+								<h3>Basic Modal Dialog</h3>
+								<p>
+									 For this demo, SimpleModal is using this "hidden" data for its content. You can also populate the modal dialog with an AJAX response, standard HTML or DOM element(s).
+								</p>
+								<p>
+									 Examples:
+								</p>
+								<p>
+									<code>$('#basicModalContent').modal(); // jQuery object - this demo</code>
+								</p>
+								<p>
+									<code>$.modal(document.getElementById('basicModalContent')); // DOM</code>
+								</p>
+								<p>
+									<code>$.modal('&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt; elements&lt;/p&gt;'); // HTML</code>
+								</p>
+								<p>
+									<code>$('&lt;div&gt;&lt;/div&gt;').load('page.html').modal(); // AJAX</code>
+								</p>
+								<div class="btn_24_blue">
+									<a href="#" class="simplemodal-close"><span>More details...</span></a>
+								</div>
+							</div>
+							<a href="#" class="basic-modal">Modal Two</a></li>
+							<li><a href="#" class="confirm_dialog">Confirm Modal</a></li>
+							<li><a class='ajax' href="data/ajax-stepy.html" title="Homer Defined">Colorbox Modal</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Notify</h6>
+					</div>
+					<div class="widget_content">
+						<div class="notify_elem">
+							<h6>Top</h6>
+							<ul>
+								<li class="alert_t">Alert</li>
+								<li class="error_t">Error</li>
+								<li class="success_t">Success</li>
+								<li class="info_t">Information</li>
+								<li class="confirm_t">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Center</h6>
+							<ul>
+								<li class="alert_c">Alert</li>
+								<li class="error_c">Error</li>
+								<li class="success_c">Success</li>
+								<li class="info_c">Information</li>
+								<li class="confirm_c">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Bottom</h6>
+							<ul>
+								<li class="alert_b">Alert</li>
+								<li class="error_b">Error</li>
+								<li class="success_b">Success</li>
+								<li class="info_b">Information</li>
+								<li class="confirm_b">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Top Left</h6>
+							<ul>
+								<li class="alert_tl">Alert</li>
+								<li class="error_tl">Error</li>
+								<li class="success_tl">Success</li>
+								<li class="info_tl">Information</li>
+								<li class="confirm_tl">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Top Center</h6>
+							<ul>
+								<li class="alert_tc">Alert</li>
+								<li class="error_tc">Error</li>
+								<li class="success_tc">Success</li>
+								<li class="info_tc">Information</li>
+								<li class="confirm_tc">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Top Right</h6>
+							<ul>
+								<li class="alert_tr">Alert</li>
+								<li class="error_tr">Error</li>
+								<li class="success_tr">Success</li>
+								<li class="info_tr">Information</li>
+								<li class="confirm_tr">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Bottom Right</h6>
+							<ul>
+								<li class="alert_br">Alert</li>
+								<li class="error_br">Error</li>
+								<li class="success_br">Success</li>
+								<li class="info_br">Information</li>
+								<li class="confirm_br">Confirm</li>
+							</ul>
+						</div>
+						<div class="notify_elem">
+							<h6>Bottom Left</h6>
+							<ul>
+								<li class="alert_bl">Alert</li>
+								<li class="error_bl">Error</li>
+								<li class="success_bl">Success</li>
+								<li class="info_bl">Information</li>
+								<li class="confirm_bl">Confirm</li>
+							</ul>
+						</div>
+						<span class="clear"></span>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Sticky Noty</h6>
+					</div>
+					<div class="widget_content">
+						<ul class="noty_elem">
+							<li class="s_noty">Simple Noty</li>
+							<li class="i_noty">
+							<h5>Heading</h5>
+							<p>
+								This Is Inline Notification
+							</p>
+							</li>
+							<li class="click_noty_btn">Inline Html
+							<div class="sticky_html">
+								<h5>Heading</h5>
+								<p>
+									Etiam convallis sodales elementum. Suspendisse interdum, nisi vitae pellentesque eleifend, justo nulla dictum lectus, consectetur elementum metus turpis quis mi. Integer non ante vel magna elementum aliquam.
+								</p>
+								<div class="btn_30_blue">
+									<a href="#"><span class="icon accept_co"></span><span class="btn_link">.accept_co</span></a>
+								</div>
+							</div>
+							</li>
+							<li class="custom_n">Custom Noty
+							<div class="sticky_custom">
+								<p>
+									Etiam convallis sodales elementum. Suspendisse interdum.
+								</p>
+							</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Iphone Style Button</h6>
+					</div>
+					<div class="widget_content">
+						<ul class="iBtn">
+							<li>
+							<label class="ibtn_tl">Iphone Style Button</label>
+							<div class="on_off">
+								<input type="checkbox" checked="checked" id="on_off_on" class="on_off"/>
+							</div>
+							</li>
+							<li>
+							<label class="ibtn_tl">Iphone Style Button</label>
+							<div class="on_off">
+								<input type="checkbox" class="on_off"/>
+							</div>
+							</li>
+							<li>
+							<label class="ibtn_tl">Iphone Style Button</label>
+							<div class="on_off">
+								<input type="checkbox" disabled="disabled" class="on_off"/>
+							</div>
+							</li>
+							<li>
+							<label class="ibtn_tl">iButton</label>
+							<div class="field switch">
+								<label class="cb-enable selected"><span>Enable</span></label>
+								<label class="cb-disable"><span>Disable</span></label>
+								<span class="clear"></span>
+							</div>
+							</li>
+							<li>
+							<label class="ibtn_tl">iButton</label>
+							<div class="field switch">
+								<label class="cb-enable selected"><span>On</span></label>
+								<label class="cb-disable"><span>Off</span></label>
+								<span class="clear"></span>
+							</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Loader</h6>
+					</div>
+					<div class="widget_content">
+						<div class="loader">
+							<span><img src="images/ajax-loader/ajax-loader.gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(1).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(2).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(3).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(13).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(16).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(5).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(7).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(8).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(9).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(10).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(11).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(4).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(12).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(15).gif" alt="Loader"></span><span><img src="images/ajax-loader/ajax-loader(6).gif" alt="Loader"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span class="clear"></span>
+			<div class="grid_4 ">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Slider</h6>
+					</div>
+					<div class="widget_content">
+						<div id="eq" class="eq_max">
+							<span class="black_g">88</span><span class="black_g">77</span><span class="black_g">55</span><span class="black_g">33</span><span class="black_g">40</span><span class="black_g">45</span><span class="black_g">70</span>
+						</div>
+						<span class="clear"></span>
+					</div>
+				</div>
+			</div>
+			<div class="grid_8">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Slider</h6>
+					</div>
+					<div class="widget_content">
+						<div class="range_slider">
+							<div class="slider_value">
+								<label for="amount">Price range:</label>
+								<input type="text" id="amount"/>
+							</div>
+							<div id="slider-range" class="black_w slider_max box_inset_s">
+							</div>
+						</div>
+						<div class="range_slider">
+							<div id="master" class="black_w slider_max box_inset_s">
+							</div>
+						</div>
+						<div class="range_slider">
+							<form id="reservation">
+								<label for="minbeds">Minimum number of beds</label>
+								<select name="minbeds" id="minbeds">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+							</form>
+						</div>
+						<!-- End demo -->
+						<span class="clear"></span>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12 full_block">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Slider</h6>
+					</div>
+					<div class="widget_content">
+						<div class="demo">
+							<form action="#">
+								<!-- demo 1 -->
+								<div class="slider_sl">
+									<fieldset>
+										<label for="speed" class="slider_label">Select a Speed:</label>
+										<select name="speed" id="speed" class="select_opt">
+											<option value="Slower">Slower</option>
+											<option value="Slow">Slow</option>
+											<option value="Med" selected="selected">Med</option>
+											<option value="Fast">Fast</option>
+											<option value="Faster">Faster</option>
+										</select>
+									</fieldset>
+								</div>
+								<!-- demo 3 -->
+								<div class="slider_sl">
+									<fieldset>
+										<label for="valueAA" class="slider_label">From:</label>
+										<select name="valueAA" id="valueAA" class="select_opt">
+											<optgroup label="2003">
+											<option value="01/03">Jan 03</option>
+											<option value="02/03">Feb 03</option>
+											<option value="03/03">Mar 03</option>
+											<option value="03/03">Apr 03</option>
+											<option value="03/03">May 03</option>
+											<option value="06/03">Jun 03</option>
+											<option value="07/03">Jul 03</option>
+											<option value="08/03" selected="selected">Aug 03</option>
+											<option value="09/03">Sep 03</option>
+											<option value="10/03">Oct 03</option>
+											<option value="11/03">Nov 03</option>
+											<option value="12/03">Dec 03</option>
+											</optgroup>
+											<optgroup label="2004">
+											<option value="01/04">Jan 04</option>
+											<option value="02/04">Feb 04</option>
+											<option value="03/04">Mar 04</option>
+											<option value="04/04">Apr 04</option>
+											<option value="04/04">May 04</option>
+											<option value="06/04">Jun 04</option>
+											<option value="07/04">Jul 04</option>
+											<option value="08/04">Aug 04</option>
+											<option value="09/04">Sep 04</option>
+											<option value="10/04">Oct 04</option>
+											<option value="11/04">Nov 04</option>
+											<option value="12/04">Dec 04</option>
+											</optgroup>
+											<optgroup label="2005">
+											<option value="01/05">Jan 05</option>
+											<option value="02/05">Feb 05</option>
+											<option value="03/05">Mar 05</option>
+											<option value="04/05">Apr 05</option>
+											<option value="05/05">May 05</option>
+											<option value="06/05">Jun 05</option>
+											<option value="07/05">Jul 05</option>
+											<option value="08/05">Aug 05</option>
+											<option value="09/05">Sep 05</option>
+											<option value="10/05">Oct 05</option>
+											<option value="11/05">Nov 05</option>
+											<option value="12/05">Dec 05</option>
+											</optgroup>
+											<optgroup label="2006">
+											<option value="01/06">Jan 06</option>
+											<option value="02/06">Feb 06</option>
+											<option value="03/06">Mar 06</option>
+											<option value="04/06">Apr 06</option>
+											<option value="06/06">May 06</option>
+											<option value="06/06">Jun 06</option>
+											<option value="07/06">Jul 06</option>
+											<option value="08/06">Aug 06</option>
+											<option value="09/06">Sep 06</option>
+											<option value="10/06">Oct 06</option>
+											<option value="11/06">Nov 06</option>
+											<option value="12/06">Dec 06</option>
+											</optgroup>
+											<optgroup label="2007">
+											<option value="01/07">Jan 07</option>
+											<option value="02/07">Feb 07</option>
+											<option value="03/07">Mar 07</option>
+											<option value="04/07">Apr 07</option>
+											<option value="07/07">May 07</option>
+											<option value="07/07">Jun 07</option>
+											<option value="07/07">Jul 07</option>
+											<option value="08/07">Aug 07</option>
+											<option value="09/07">Sep 07</option>
+											<option value="10/07">Oct 07</option>
+											<option value="11/07">Nov 07</option>
+											<option value="12/07">Dec 07</option>
+											</optgroup>
+											<optgroup label="2008">
+											<option value="01/08">Jan 08</option>
+											<option value="02/08">Feb 08</option>
+											<option value="03/08">Mar 08</option>
+											<option value="04/08">Apr 08</option>
+											<option value="08/08">May 08</option>
+											<option value="08/08">Jun 08</option>
+											<option value="08/08">Jul 08</option>
+											<option value="08/08">Aug 08</option>
+											<option value="09/08">Sep 08</option>
+											<option value="10/08">Oct 08</option>
+											<option value="11/08">Nov 08</option>
+											<option value="12/08">Dec 08</option>
+											</optgroup>
+										</select>
+										<label for="valueBB" class="slider_label">To:</label>
+										<select name="valueBB" id="valueBB" class="select_opt">
+											<optgroup label="2003">
+											<option value="01/03">Jan 03</option>
+											<option value="02/03">Feb 03</option>
+											<option value="03/03">Mar 03</option>
+											<option value="03/03">Apr 03</option>
+											<option value="03/03">May 03</option>
+											<option value="06/03">Jun 03</option>
+											<option value="07/03">Jul 03</option>
+											<option value="08/03">Aug 03</option>
+											<option value="09/03">Sep 03</option>
+											<option value="10/03">Oct 03</option>
+											<option value="11/03">Nov 03</option>
+											<option value="12/03">Dec 03</option>
+											</optgroup>
+											<optgroup label="2004">
+											<option value="01/04">Jan 04</option>
+											<option value="02/04">Feb 04</option>
+											<option value="03/04">Mar 04</option>
+											<option value="04/04">Apr 04</option>
+											<option value="04/04">May 04</option>
+											<option value="06/04">Jun 04</option>
+											<option value="07/04">Jul 04</option>
+											<option value="08/04">Aug 04</option>
+											<option value="09/04">Sep 04</option>
+											<option value="10/04">Oct 04</option>
+											<option value="11/04">Nov 04</option>
+											<option value="12/04">Dec 04</option>
+											</optgroup>
+											<optgroup label="2005">
+											<option value="01/05">Jan 05</option>
+											<option value="02/05">Feb 05</option>
+											<option value="03/05">Mar 05</option>
+											<option value="04/05">Apr 05</option>
+											<option value="05/05">May 05</option>
+											<option value="06/05">Jun 05</option>
+											<option value="07/05">Jul 05</option>
+											<option value="08/05">Aug 05</option>
+											<option value="09/05">Sep 05</option>
+											<option value="10/05">Oct 05</option>
+											<option value="11/05">Nov 05</option>
+											<option value="12/05">Dec 05</option>
+											</optgroup>
+											<optgroup label="2006">
+											<option value="01/06">Jan 06</option>
+											<option value="02/06">Feb 06</option>
+											<option value="03/06">Mar 06</option>
+											<option value="04/06">Apr 06</option>
+											<option value="06/06">May 06</option>
+											<option value="06/06">Jun 06</option>
+											<option value="07/06">Jul 06</option>
+											<option value="08/06">Aug 06</option>
+											<option value="09/06">Sep 06</option>
+											<option value="10/06">Oct 06</option>
+											<option value="11/06">Nov 06</option>
+											<option value="12/06">Dec 06</option>
+											</optgroup>
+											<optgroup label="2007">
+											<option value="01/07">Jan 07</option>
+											<option value="02/07">Feb 07</option>
+											<option value="03/07">Mar 07</option>
+											<option value="04/07">Apr 07</option>
+											<option value="07/07">May 07</option>
+											<option value="07/07">Jun 07</option>
+											<option value="07/07">Jul 07</option>
+											<option value="08/07" selected="selected">Aug 07</option>
+											<option value="09/07">Sep 07</option>
+											<option value="10/07">Oct 07</option>
+											<option value="11/07">Nov 07</option>
+											<option value="12/07">Dec 07</option>
+											</optgroup>
+											<optgroup label="2008">
+											<option value="01/08">Jan 08</option>
+											<option value="02/08">Feb 08</option>
+											<option value="03/08">Mar 08</option>
+											<option value="04/08">Apr 08</option>
+											<option value="08/08">May 08</option>
+											<option value="08/08">Jun 08</option>
+											<option value="08/08">Jul 08</option>
+											<option value="08/08">Aug 08</option>
+											<option value="09/08">Sep 08</option>
+											<option value="10/08">Oct 08</option>
+											<option value="11/08">Nov 08</option>
+											<option value="12/08">Dec 08</option>
+											</optgroup>
+										</select>
+									</fieldset>
+									<span class="clear"></span>
+								</div>
+								<!-- demo 2 -->
+								<div class="slider_sl">
+									<fieldset>
+										<label for="valueA" class="slider_label">From:</label>
+										<select name="valueA" id="valueA" class="select_opt">
+											<option value="6am">6:00</option>
+											<option value="7am">7:00</option>
+											<option value="8am">8:00</option>
+											<option value="9am" selected="selected">9:00</option>
+											<option value="10am">10:00</option>
+											<option value="11am">11:00</option>
+											<option value="Noon">Noon</option>
+											<option value="1pm">1:00</option>
+											<option value="2pm">2:00</option>
+											<option value="3pm">3:00</option>
+											<option value="4pm">4:00</option>
+											<option value="5pm">5:00</option>
+											<option value="6pm">6:00</option>
+											<option value="7pm">7:00</option>
+											<option value="8pm">8:00</option>
+											<option value="9pm">9:00</option>
+											<option value="10pm">10:00</option>
+											<option value="11pm">11:00</option>
+											<option value="12pm">12:00</option>
+										</select>
+										<label for="valueB" class="slider_label">To:</label>
+										<select name="valueB" id="valueB" class="select_opt">
+											<option value="6am">6:00</option>
+											<option value="7am">7:00</option>
+											<option value="8am">8:00</option>
+											<option value="9am">9:00</option>
+											<option value="10am">10:00</option>
+											<option value="11am">11:00</option>
+											<option value="Noon">Noon</option>
+											<option value="1pm">1:00</option>
+											<option value="2pm">2:00</option>
+											<option value="3pm">3:00</option>
+											<option value="4pm">4:00</option>
+											<option value="5pm">5:00</option>
+											<option value="6pm">6:00</option>
+											<option value="7pm">7:00</option>
+											<option value="8pm">8:00</option>
+											<option value="9pm" selected="selected">9:00</option>
+											<option value="10pm">10:00</option>
+											<option value="11pm">11:00</option>
+											<option value="12pm">12:00</option>
+										</select>
+									</fieldset>
+								</div>
+							</form>
+						</div>
+						<span class="clear"></span>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12 full_block">
+				<div class="widget_wrap">
+					<div class="widget_top">
+						<span class="h_icon list"></span>
+						<h6>Breadcrumbs</h6>
+					</div>
+					<div class="widget_content">
+						<div class="breadCrumbHolder module">
+							<div id="breadCrumb0" class="breadCrumb module white_lin">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Biocompare Home</a></li>
+									<li><a href="#">Product Discovery</a></li>
+									<li><a href="#">Life Science Products / Laboratory Supplies</a></li>
+									<li><a href="#">Kits and Assays</a></li>
+									<li><a href="#">Mutagenesis Kits</a></li>
+									<li> Mutation Generation System&trade; </li>
+								</ul>
+							</div>
+						</div>
+						<div class="breadCrumbHolder module">
+							<div id="breadCrumb1" class="breadCrumb module white_lin">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Biocompare Home</a></li>
+									<li><a href="#">Product Discovery</a></li>
+									<li><a href="#">Life Science Products / Laboratory Supplies</a></li>
+									<li><a href="#">Kits and Assays</a></li>
+									<li><a href="#">Mutagenesis Kits</a></li>
+									<li> Mutation Generation System&trade; Kit (MGS&trade; Kit) from Finnzymes Oy </li>
+								</ul>
+							</div>
+						</div>
+						<div class="breadCrumbHolder module">
+							<div id="breadCrumb2" class="breadCrumb module white_lin">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Biocompare Home</a></li>
+									<li><a href="#">Product Discovery</a></li>
+									<li><a href="#">Life Science Products / Laboratory Supplies</a></li>
+									<li><a href="#">Kits and Assays</a></li>
+									<li><a href="#">Mutagenesis Kits</a></li>
+									<li> Mutation Generation System&trade; Kit (MGS&trade; Kit) from Finnzymes Oy. Ok, let's get ridiculously long here, we all know it happens. </li>
+								</ul>
+							</div>
+						</div>
+						<div class="breadCrumbHolder module">
+							<div id="breadCrumb3" class="breadCrumb module white_lin">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Biocompare Home</a></li>
+									<li> Mutation Generation System&trade; </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="clear"></span>
+	</div>
+</div>
+</body>
+
+<!-- Mirrored from www.lab.westilian.com/bingo-admin/ui-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Mar 2018 05:28:50 GMT -->
+</html>
